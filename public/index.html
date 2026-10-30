@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#173b35">
+  <meta name="description" content="Practise spoken English with your AI tutor.">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Speak English AI</title>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brandmark">S</div>
+    <div><strong>Speak English AI</strong><small>Your personal speaking coach</small></div>
+    <button id="installBtn" class="install hidden">Install</button>
+  </header>
+
+  <main>
+    <section class="welcome">
+      <div class="eyebrow">YOUR DAILY ENGLISH PRACTICE</div>
+      <h1>Speak with confidence.</h1>
+      <p>Practise real conversations, learn from mistakes and improve every day.</p>
+      <div class="stats">
+        <div><b id="streak">0</b><span>day streak</span></div>
+        <div><b id="turns">0</b><span>messages today</span></div>
+        <div><b id="score">—</b><span>practice score</span></div>
+      </div>
+    </section>
+
+    <section class="mode-section">
+      <div class="section-heading"><h2>Choose your practice</h2><span>Pick a lesson</span></div>
+      <div class="modes">
+        <button class="mode active" data-mode="Daily conversation"><span>💬</span><b>Daily chat</b><small>Everyday English</small></button>
+        <button class="mode" data-mode="Job interview"><span>🧑‍💼</span><b>Job interview</b><small>Answer confidently</small></button>
+        <button class="mode" data-mode="Business and customer communication"><span>🤝</span><b>Work & customers</b><small>Professional English</small></button>
+        <button class="mode" data-mode="Grammar correction"><span>✍️</span><b>Grammar</b><small>Fix your mistakes</small></button>
+      </div>
+    </section>
+
+    <section class="chat-card">
+      <div class="chat-head">
+        <div class="avatar">AI</div>
+        <div><b>Your AI English tutor</b><small><i></i> Ready to practise</small></div>
+        <select id="language" aria-label="Explanation language">
+          <option>Odia + English</option><option>Hindi + English</option><option>English only</option>
+        </select>
+      </div>
+      <div id="chat" class="chat" aria-live="polite">
+        <div class="bubble assistant">Hello! 👋 I'm your English teacher. Let's practise together. First, tell me: <b>What is your name, and what do you do?</b></div>
+      </div>
+      <div class="quick-prompts">
+        <button data-prompt="Help me introduce myself in English.">Self introduction</button>
+        <button data-prompt="Teach me five useful English sentences for today.">5 daily sentences</button>
+        <button data-prompt="Start a beginner job interview practice. Ask one question at a time.">Interview practice</button>
+      </div>
+      <div class="composer">
+        <button id="micBtn" class="mic" title="Speak your answer" aria-label="Speak your answer">🎙️</button>
+        <textarea id="message" rows="1" placeholder="Type your answer in English..."></textarea>
+        <button id="sendBtn" class="send" aria-label="Send">➤</button>
+      </div>
+      <div class="chat-foot"><span id="status">AI replies are generated using ChatGPT.</span><button id="clearBtn">New practice</button></div>
+    </section>
+
+    <section class="tips">
+      <h2>Today's learning goals</h2>
+      <div class="tip"><span>01</span><div><b>Speak for 10 minutes</b><small>Don't worry about mistakes.</small></div></div>
+      <div class="tip"><span>02</span><div><b>Learn 5 new sentences</b><small>Say each sentence aloud twice.</small></div></div>
+      <div class="tip"><span>03</span><div><b>Use corrections</b><small>Repeat the corrected sentence.</small></div></div>
+    </section>
+  </main>
+  <footer>Made for daily learning · Keep practising 🌱</footer>
+  <script src="/app.js"></script>
+</body>
+</html>
